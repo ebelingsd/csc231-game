@@ -6,6 +6,8 @@ add_library(items
         spear.h
         sword_rusty.cpp
         sword_rusty.h
+        axe.cpp
+        axe.h
 )
 
 target_include_directories(items PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
