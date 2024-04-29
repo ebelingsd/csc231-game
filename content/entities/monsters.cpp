@@ -11,6 +11,7 @@
 #include "move.h"
 #include "sword_rusty.h"
 #include "spear.h"
+#include "axe.h"
 
 namespace Monsters {
 void make_ogre(std::shared_ptr<Entity>& monster) {
@@ -23,7 +24,7 @@ void make_ogre(std::shared_ptr<Entity>& monster) {
 void make_orc_masked(std::shared_ptr<Entity>& monster) {
     monster->set_sprite("orc_masked");
     monster->set_max_health(3);
-    monster->add_to_inventory(std::make_shared<Sword>(2));
+    monster->add_to_inventory(std::make_shared<Axe>(2));
     monster->behavior = behavior;
 }
 
@@ -41,7 +42,11 @@ std::unique_ptr<Action> behavior(Engine& engine, Entity& entity) {
                                                   engine.hero->get_position());
         if (path.size() > 1) {
             auto direction = path.at(1) - path.at(0);
+            if (probability(17)) {
+                return std::make_unique<Rest>();
+            }
             return std::make_unique<Move>(direction);
+
         }
     }
     // Monster doesn't see Hero
