@@ -1,7 +1,7 @@
 #include "thrust.h"
 
-constexpr int duration = 10; //number of frames
-constexpr int delta = 3;
+constexpr int duration = 4; //number of frames
+constexpr int delta = 2;
 
 Thrust::Thrust(Sprite& sprite, Vec direction)
     :Event{duration}, sprite{sprite}, copy{sprite}, direction{direction} {
