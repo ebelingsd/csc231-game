@@ -2,6 +2,7 @@
 
 #include <sstream>
 
+#include <algorithm>
 #include "action.h"
 #include "engine.h"
 #include "item.h"
