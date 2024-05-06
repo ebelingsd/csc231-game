@@ -5,6 +5,7 @@
 #include "opendoor.h"
 #include "rest.h"
 #include "attack.h"
+#include "item.h"
 
 
 Move::Move(Vec vec)
@@ -29,9 +30,13 @@ Result Move::perform(Engine& engine, std::shared_ptr<Entity> entity) {
             return alternative(Rest{});
         }
     }
+
     else {
         //must be an empty walkable tile
         entity->move_to(pos);
+        if (tile.has_item() && entity == engine.hero) {
+            tile.item->interact(engine, *entity);
+        }
     }
     return success();
 }
