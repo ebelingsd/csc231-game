@@ -12,6 +12,12 @@ add_library(events
         animation.h
         sound.cpp
         sound.h
+        drop.cpp
+        drop.h
+        pickup.cpp
+        pickup.h
+        spin.cpp
+        spin.h
 )
 
 target_include_directories(events PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
