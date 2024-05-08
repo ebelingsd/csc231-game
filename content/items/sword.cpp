@@ -19,8 +19,7 @@ void Sword::use(Engine& engine, Entity& attacker, Entity& defender) {
     thrust->add_next(lightning);     //engine.events.create_event<Hit>(defender, damage);
 }
 void Sword::interact(Engine& engine, Entity& entity) {
-//    Vec pos = entity.get_position();
-//    Tile& tile = engine.dungeon.get_tile(pos);
+    //picks up sword
     engine.events.create_event<Pickup>(entity);
 }
 

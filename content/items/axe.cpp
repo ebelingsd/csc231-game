@@ -15,5 +15,6 @@ void Axe::use(Engine& engine, Entity& attacker, Entity& defender) {
     engine.events.create_event<Hit>(defender, damage);
 }
 void Axe::interact(Engine& engine, Entity& entity) {
+    //picks up axe
     engine.events.create_event<Pickup>(entity);
 }

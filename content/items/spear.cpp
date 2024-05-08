@@ -16,5 +16,6 @@ void Spear::use(Engine& engine, Entity& attacker, Entity& defender) {
 }
 
 void Spear::interact(Engine& engine, Entity& entity) {
+    //picks up spear
     engine.events.create_event<Pickup>(entity);
 }

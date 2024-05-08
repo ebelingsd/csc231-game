@@ -14,5 +14,6 @@ void Sword_Rusty::use(Engine& engine, Entity& attacker, Entity& defender) {
     engine.events.create_event<Hit>(defender, damage);
 }
 void Sword_Rusty::interact(Engine& engine, Entity& entity) {
+    //picks up rusty sword
     engine.events.create_event<Pickup>(entity);
 }
