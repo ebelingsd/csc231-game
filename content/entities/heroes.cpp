@@ -6,6 +6,7 @@
 #include "opendoor.h"
 #include "sword.h"
 #include "entity.h"
+#include "tile.h"
 
 namespace Heroes {
     void make_knight(std::shared_ptr<Entity>& hero) {
@@ -34,8 +35,9 @@ namespace Heroes {
         else if (key =="C") {
             return std::make_unique<CloseDoor>();
         }
-        else if (!key.empty() && std::isdigit(key.at(0))){ //idk if this else if is put in the right place, dr. brown just said "Add this in hero's behavior function to switch items"
-            int item_num = std::stoi(key) - 1; // "1" -> index 0
+        else if (!key.empty() && std::isdigit(key.at(0))){
+            //keys 1-5 allow you to change what you are holding (from inventory)
+            int item_num = std::stoi(key) - 1;
             entity.select_item(item_num);
         }
         return nullptr;
