@@ -25,9 +25,7 @@ int main() {
             std::shared_ptr<Entity> monster = engine.create_monster();
             Monsters::make_goblin(monster);
         }
-//        Vec pos = engine.dungeon.random_open_room_tile();
-//        Tile& tile = engine.dungeon.get_tile(pos);
-//        tile.item = std::make_shared<Stairs>(stairs); //find the actual name for it
+
           engine.run();
     }
     catch (std::exception& e) {
