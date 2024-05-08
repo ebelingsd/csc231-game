@@ -17,8 +17,3 @@ void Drop::execute(Engine& engine) {
     //gets item of the monster that died
     tile.item = entity.get_current_item();
 }
-//you need to place their weapon at the place where each monster dies-done
-//you need to get the tile of the entity before it dies, save it, get the
-    // weapon of the entity and save it, and then place the weapon there-done
-//you have to make the item be displayed-done
-    //if there is a door it has to be beneath
