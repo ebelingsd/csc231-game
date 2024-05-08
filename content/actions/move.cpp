@@ -34,6 +34,7 @@ Result Move::perform(Engine& engine, std::shared_ptr<Entity> entity) {
     else {
         //must be an empty walkable tile
         entity->move_to(pos);
+        //if hero walks onto tile with an item, it gets added to inventory
         if (tile.has_item() && entity == engine.hero) {
             tile.item->interact(engine, *entity);
         }
