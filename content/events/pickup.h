@@ -12,5 +12,4 @@ private:
     Entity& entity;
 };
 
-//tile.item.interact(pass in you and the object
-//in move you call pickup if tile.has_item?
+
