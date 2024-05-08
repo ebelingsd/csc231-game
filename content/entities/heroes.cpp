@@ -11,8 +11,8 @@
 namespace Heroes {
     void make_knight(std::shared_ptr<Entity>& hero) {
         hero->set_sprite("knight");
-        hero->set_max_health(20);
-        hero->add_to_inventory(std::make_shared<Sword>(3));
+        hero->set_max_health(25);
+        hero->add_to_inventory(std::make_shared<Sword>(2));
         hero->behavior = behavior;
     }
     std::unique_ptr<Action> behavior(Engine& engine, Entity& entity) {

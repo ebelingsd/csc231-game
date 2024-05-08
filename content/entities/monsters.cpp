@@ -18,21 +18,21 @@ namespace Monsters {
 void make_ogre(std::shared_ptr<Entity>& monster) {
     monster->set_sprite("ogre");
     monster->set_max_health(6);
-    monster->add_to_inventory(std::make_shared<Sword_Rusty>(2));
+    monster->add_to_inventory(std::make_shared<Sword_Rusty>(4));
     monster->behavior = behavior;
 }
 
 void make_orc_masked(std::shared_ptr<Entity>& monster) {
     monster->set_sprite("orc_masked");
     monster->set_max_health(3);
-    monster->add_to_inventory(std::make_shared<Axe>(2));
+    monster->add_to_inventory(std::make_shared<Axe>(3));
     monster->behavior = behavior;
 }
 
 void make_goblin(std::shared_ptr<Entity>& monster) {
     monster->set_sprite("goblin");
     monster->set_max_health(3);
-    monster->add_to_inventory(std::make_shared<Spear>(2));
+    monster->add_to_inventory(std::make_shared<Spear>(3));
     monster->behavior = behavior;
 }
 
