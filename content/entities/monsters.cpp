@@ -12,6 +12,7 @@
 #include "sword_rusty.h"
 #include "spear.h"
 #include "axe.h"
+#include "tile.h"
 
 namespace Monsters {
 void make_ogre(std::shared_ptr<Entity>& monster) {
