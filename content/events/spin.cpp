@@ -3,7 +3,7 @@
 
 constexpr int duration = 10;
 
-Spin::Spin(Sprite& sprite, Vec direction)
+Spin::Spin(Sprite& sprite, Vec direction)  //spins weapon 360 degrees
     :Event{duration}, sprite{sprite}, copy{sprite}, starting_angle{sprite.angle} {
     if (direction == Vec{1, 0}) {
         starting_angle = 0;
